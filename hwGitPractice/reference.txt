@@ -17,5 +17,14 @@ reset - allows you to rewind the project to a chosen commit
 diff - displays what has been changed
 
 status - tells you status of staging area compared to working directory
+dsasdsddddd
+log -aada shows the commits you have done
+adasd
+adsdlas;d;asldkaksdakldkas
 
-log - shows the commits you have done
+witcher 3 won
+aklsdaldkmlakdmakmd
+
+Kojiiiiima
+
+
