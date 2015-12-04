@@ -1,21 +1,21 @@
-Clone
+Clone - gives you a local copy of the git repository.
 
-Add
+Add - adds file to the staging area.
 
-Commit
+Commit - commits the changes you have made. Add a comment with it.
 
-Push
+Push - send committed changes back to git hub. Updates repository with local changes.
 
-Pull
+Pull - updates local with newest repository information.
 
-show
+show - shows one or more objects. 
 
-checkout 
+checkout - restores it to how it was at last commit.
 
-reset
+reset - allows you to rewind the project to a chosen commit
 
-diff
+diff - displays what has been changed
 
-status 
+status - tells you status of staging area compared to working directory
 
-log
+log - shows the commits you have done
