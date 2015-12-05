@@ -1,3 +1,5 @@
+Jackson Morgan
+
 Clone - gives you a local copy of the git repository.
 
 Add - adds file to the staging area.
