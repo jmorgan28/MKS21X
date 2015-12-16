@@ -45,16 +45,15 @@ public class TempConversionWindow extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e){
 	String event = e.getActionCommand();
 	if(event.equals("cel")){
-	    Double n  = FtoC(Double.parseDouble(t.getText()));
-	    String s = "" + n;
+	    double n = FtoC(Integer.parseInt(t))
+	    String s = t;
+	    s += "-0101000";
 	    j.setText(s);
 }
 
+
 	if(event.equals("far")){
-	    Double n  = CtoF(Double.parseDouble(t.getText()));
-	    String s = ""  + n;
-	    j.setText(s);
-	   
+	    //j.setText("Fish");
   
 	}
     }
