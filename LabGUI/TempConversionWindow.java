@@ -18,11 +18,11 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 	 pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
 
 	 JButton cel = new JButton("toC");
-	 b.addActionListener(this);
-	 b.setActionCommand("cel");
+	 cel.addActionListener(this);
+	 cel.setActionCommand("cel");
 	 JButton far = new JButton("toF");
-	 b2.addActionListener(this);
-	 b2.setActionCommand("far");
+	 far.addActionListener(this);
+	 far.setActionCommand("far");
 
 	 t = new JTextField(10);
 
@@ -32,18 +32,28 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 	 pane.add(far);
 	 pane.add(j);
     }
+    
+     public static double CtoF(double t){
+	return t * (9.0/5.0) + 32;
+    }
+
+    public static double FtoC(double t){
+	return (t - 32.0) * (5.0 / 9.0);
+    }
+
 
     public void actionPerformed(ActionEvent e){
 	String event = e.getActionCommand();
-	if(event.equals("Byte")){
-	    String s = t.getText();
+	if(event.equals("cel")){
+	    double n = FtoC(Integer.parseInt(t))
+	    String s = t;
 	    s += "-0101000";
 	    j.setText(s);
 }
 
 
-	if(event.equals("NotByte")){
-	    j.setText("Fish");
+	if(event.equals("far")){
+	    //j.setText("Fish");
   
 	}
     }
