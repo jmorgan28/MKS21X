@@ -16,21 +16,21 @@ public class BarCode implements Comparable{
 		}
 	for(int i = 0; i < zip.length(); i ++){
 	    try{
-	    k += Integer.parseInt(zip.substring(i));
+		_checkDigit = checkSum();
 	    }
 	    catch(NumberFormatException e){
 		throw new RuntimeException();
 	    }
 	}
 	_zip = zip;
-	_checkDigit = k % 10;
+	
     }
 
 
     // postcondition: Creates a copy of a bar code.
     public BarCode(BarCode x){
 	_zip = x.getZip();
-	_checkDigit = x.getDigit(); 
+	_checkDigit = x.checkSum(); 
     }
 
 
