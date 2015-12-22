@@ -15,8 +15,12 @@ public class BarCode implements Comparable{
 	    throw new RuntimeException();
 		}
 	for(int i = 0; i < zip.length(); i ++){
+	    try{
 	    k += Integer.parseInt(zip.substring(i));
-	    // do something to test if it is int
+	    }
+	    catch(NumberFormatException e){
+		throw new RuntimeException();
+	    }
 	}
 	_zip = zip;
 	_checkDigit = k % 10;
@@ -39,7 +43,14 @@ public class BarCode implements Comparable{
     }
     
     //post: computes and returns the check sum for _zip
-    private int checkSum(){}
+    private int checkSum(){
+	int k = 0;
+	for(int i = 0; i < _zip.length(); i ++){
+	    k += Integer.parseInt(_zip.substring(i));
+	}
+	return k;
+    }
+	     
 
     //postcondition: format zip + check digit + barcode 
     //ex. "084518  |||:::|::|::|::|:|:|::::|||::|:|"      
