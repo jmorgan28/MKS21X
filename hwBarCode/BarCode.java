@@ -47,7 +47,7 @@ public class BarCode implements Comparable{
     private int checkSum(){
 	int k = 0;
 	for(int i = 0; i < _zip.length(); i ++){
-	    k += Integer.parseInt(_zip.substring(i));
+	    k += Integer.parseInt(_zip.substring(i, i+ 1));
 	}
 	return k;
     }
@@ -61,8 +61,7 @@ public class BarCode implements Comparable{
 	s += _checkDigit + " ";
 	s += "|";
 	for(int i = 0; i < _zip.length(); i++){
-	    System.out.println("sfsF");
-	    s += code[Integer.parseInt(_zip.substring(i))];
+	    s += code[Integer.parseInt(_zip.substring(i, i + 1))];
 	}
 	s += "|";
 	return s;

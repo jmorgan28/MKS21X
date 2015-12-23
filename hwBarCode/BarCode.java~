@@ -14,6 +14,7 @@ public class BarCode implements Comparable{
 	if(zip.length() != 5){
 	    throw new RuntimeException();
 		}
+	_zip = zip;
 	for(int i = 0; i < zip.length(); i ++){
 	    try{
 		_checkDigit = checkSum();
@@ -22,7 +23,7 @@ public class BarCode implements Comparable{
 		throw new RuntimeException();
 	    }
 	}
-	_zip = zip;
+	
 	
     }
 
@@ -60,6 +61,7 @@ public class BarCode implements Comparable{
 	s += _checkDigit + " ";
 	s += "|";
 	for(int i = 0; i < _zip.length(); i++){
+	    System.out.println("sfsF");
 	    s += code[Integer.parseInt(_zip.substring(i))];
 	}
 	s += "|";
@@ -79,7 +81,20 @@ public class BarCode implements Comparable{
     // true when they match.
 
 
-    public int compareTo(Comparable other){}
+    public int compareTo(Object other){
+	if( equals(other) && _checkDigit == (((BarCode)other).getDigit())){
+	    return 1;
+	}
+	else{
+	    return 0;
+	}
+    }
     // postcondition: compares the zip + checkdigit 
+
+
+    public static void main(String[]args){
+	BarCode L = new BarCode("53567");
+	System.out.println(L);
+    }
 
 }
