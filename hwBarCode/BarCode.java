@@ -15,14 +15,14 @@ public class BarCode implements Comparable{
 	    throw new RuntimeException();
 		}
 	_zip = zip;
-	for(int i = 0; i < zip.length(); i ++){
+
 	    try{
 		_checkDigit = checkSum();
 	    }
 	    catch(NumberFormatException e){
 		throw new RuntimeException();
 	    }
-	}
+	
 	
 	
     }
@@ -49,7 +49,7 @@ public class BarCode implements Comparable{
 	for(int i = 0; i < _zip.length(); i ++){
 	    k += Integer.parseInt(_zip.substring(i, i+ 1));
 	}
-	return k;
+	return k % 10;
     }
 	     
 
@@ -63,6 +63,7 @@ public class BarCode implements Comparable{
 	for(int i = 0; i < _zip.length(); i++){
 	    s += code[Integer.parseInt(_zip.substring(i, i + 1))];
 	}
+	 s += code[_checkDigit];
 	s += "|";
 	return s;
 
@@ -92,8 +93,12 @@ public class BarCode implements Comparable{
 
 
     public static void main(String[]args){
-	BarCode L = new BarCode("53567");
+	BarCode L = new BarCode("32456");
 	System.out.println(L);
+	BarCode W = new BarCode("32256");
+	Object T = new Object();
+	System.out.println(W);
+	System.out.println(L.compareTo(T));
     }
 
 }
