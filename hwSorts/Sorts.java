@@ -19,7 +19,7 @@ public class Sorts{
        if (data.length == 1){
 	   s = "[" + data[0] + "]";
        }
-       System.out.print(s);
+       System.out.println(s);
 	   
    }
    public static void insertionSort(int[]data){
@@ -34,6 +34,7 @@ public class Sorts{
 	       w --;
 	       
 	   }
+	   printArray(data);
 	   i ++;
        }
 
@@ -62,8 +63,30 @@ public class Sorts{
 		ctr ++;}
 	    i ++;
 	}
+	printArray(data);
 	q ++;}
     }
+
+    public static void bubbleSort(int [] data){
+	int i = 0;
+	while(i < data.length){
+	    int k = 0;
+	    
+	    while(k < data.length - i - 1){
+		if (data[k] > data[k + 1]){
+			int rem = data[k];
+			data[k] = data[k + 1];
+			data[k + 1] = rem; 
+		    }
+		k ++;
+	    }
+	    //printArray(data);
+	    i ++;
+	}
+    }
+
+
+
 		
 		
 	    
@@ -71,11 +94,11 @@ public class Sorts{
 
 
      public static void main(String[]args){
-	 int[] arrayName = {1000, -43, -42, -42, 8, 6, 7, 7, 5, 3, 1000, -54, 0, 7, 9, -329239, -329239};
+	 int[] arrayName = {1 , 2,  9, 5, 0, 3};
 	 // int[] arrayName = {4, 1, 3};
 	Sorts.printArray( arrayName);
 	System.out.println();
-	Sorts.selectionSort( arrayName);
+	Sorts.bubbleSort( arrayName);
 	Sorts.printArray( arrayName);
 	}
 }
