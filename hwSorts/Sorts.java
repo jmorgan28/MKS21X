@@ -36,7 +36,7 @@ public class Sorts{
 	   }
 	   i ++;
        }
-       
+
 	       
 	   
       //your code here to make data re-order its elements
@@ -45,12 +45,37 @@ public class Sorts{
    }
 
 
+    public static void selection(int [] data){
+	int q = 0;
+	int ctr = 0;
+	while(q < data.length){    
+	int i = ctr;
+	int n = data[i];
+	int rem = 0;
+	while(i < data.length){
+	    if(n >= data[i]){
+		n = data[i];
+	        rem = i;}
+	    if(i == data.length - 1){
+		data[rem] = data[ctr];
+		data[ctr] = n;
+		ctr ++;}
+	    i ++;
+	}
+	q ++;}
+    }
+		
+		
+	    
+	
+
+
      public static void main(String[]args){
 	 int[] arrayName = {1000, -43, -42, -42, 8, 6, 7, 7, 5, 3, 1000, -54, 0, 7, 9, -329239, -329239};
 	 // int[] arrayName = {4, 1, 3};
 	Sorts.printArray( arrayName);
 	System.out.println();
-	Sorts.insertionSort( arrayName);
+	Sorts.selection( arrayName);
 	Sorts.printArray( arrayName);
 	}
 }
