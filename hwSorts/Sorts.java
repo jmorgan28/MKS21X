@@ -45,7 +45,7 @@ public class Sorts{
    }
 
 
-    public static void selection(int [] data){
+    public static void selectionSort(int [] data){
 	int q = 0;
 	int ctr = 0;
 	while(q < data.length){    
@@ -75,7 +75,7 @@ public class Sorts{
 	 // int[] arrayName = {4, 1, 3};
 	Sorts.printArray( arrayName);
 	System.out.println();
-	Sorts.selection( arrayName);
+	Sorts.selectionSort( arrayName);
 	Sorts.printArray( arrayName);
 	}
 }
