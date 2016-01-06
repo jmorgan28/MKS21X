@@ -94,8 +94,8 @@ public class Sorts{
 
 
      public static void main(String[]args){
-	 int[] arrayName = {1 , 2,  9, 5, 0, 3};
-	 // int[] arrayName = {4, 1, 3};
+	 //int[] arrayName = {1 , 2,  9, 5, 0, 3};
+	 int[] arrayName = {-24, 32, 459, 459, -7, -7, 2323, 34, 392, 0, -203, 25, 3994, -53, 8};
 	Sorts.printArray( arrayName);
 	System.out.println();
 	Sorts.bubbleSort( arrayName);
