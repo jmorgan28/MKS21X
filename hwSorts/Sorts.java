@@ -69,18 +69,20 @@ public class Sorts{
 
     public static void bubbleSort(int [] data){
 	int i = 0;
-	while(i < data.length){
+	int swap = 1;
+	while(i < data.length && swap != 0){
 	    int k = 0;
-	    
+	    swap = 0;
 	    while(k < data.length - i - 1){
 		if (data[k] > data[k + 1]){
 			int rem = data[k];
 			data[k] = data[k + 1];
-			data[k + 1] = rem; 
+			data[k + 1] = rem;
+			swap ++;
 		    }
 		k ++;
 	    }
-	    //printArray(data);
+	    printArray(data);
 	    i ++;
 	}
     }
@@ -94,8 +96,8 @@ public class Sorts{
 
 
      public static void main(String[]args){
-	 //int[] arrayName = {1 , 2,  9, 5, 0, 3};
-	 int[] arrayName = {-24, 32, 459, 459, -7, -7, 2323, 34, 392, 0, -203, 25, 3994, -53, 8};
+	 int[] arrayName = {1 , 2,  9, 5, 0, 3};
+	 //int[] arrayName = {-24, 32, 459, 459, -7, -7, 2323, 34, 392, 0, -203, 25, 3994, -53, 8};
 	Sorts.printArray( arrayName);
 	System.out.println();
 	Sorts.bubbleSort( arrayName);
