@@ -26,3 +26,17 @@ echo ---selection reversed
 java Driver2 selection 20000 reversed
 java Driver2 selection 40000 reversed
 java Driver2 selection 80000 reversed
+echo ----------------
+echo -bubble
+echo ---selection random
+java Driver2 bubble 20000 random
+java Driver2 bubble 40000 random
+java Driver2 bubble 80000 random
+echo ---selection sorted
+java Driver2 bubble 20000 sorted
+java Driver2 bubble 40000 sorted
+java Driver2 bubble 80000 sorted
+echo ---selection reversed
+java Driver2 bubble 20000 reversed
+java Driver2 bubble 40000 reversed
+java Driver2 bubble 80000 reversed

@@ -1,5 +1,6 @@
 import java.util.*;
 public class Sorts{
+    static int debug = 0;
    public static void printArray(int[]data){
        String s = "";
        int i = 0;
@@ -35,7 +36,8 @@ public class Sorts{
 	       w --;
 	       
 	   }
-	   printArray(data);
+	   if (debug == 1){ 
+	       printArray(data);}
 	   i ++;
        }
 
@@ -64,7 +66,8 @@ public class Sorts{
 		ctr ++;}
 	    i ++;
 	}
-	printArray(data);
+	if (debug == 1){ 
+	       printArray(data);}
 	q ++;}
     }
 
@@ -83,7 +86,8 @@ public class Sorts{
 		    }
 		k ++;
 	    }
-	    printArray(data);
+	    if (debug == 1){ 
+	       printArray(data);}
 	    i ++;
 	}
     }
@@ -123,7 +127,7 @@ public class Sorts{
 	 //System.out.println();
 	 //Sorts.bubbleSort( arrayName);
 	//Sorts.printArray( arrayName);
-	 int [] ary = new int[100]; 
-	 Sorts.printArray(Sorts.fillRandom(ary));
+	 //int [] ary = new int[100]; 
+	 // Sorts.printArray(Sorts.fillRandom(ary));
 	}
 }
