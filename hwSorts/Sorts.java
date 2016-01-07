@@ -125,7 +125,7 @@ public class Sorts{
 	 //int[] arrayName = {-24, 32, 459, 459, -7, -7, 2323, 34, 392, 0, -203, 25, 3994, -53, 8};
 	 //Sorts.printArray( arrayName);
 	 //System.out.println();
-	 //Sorts.bubbleSort( arrayName);
+	 //Sorts.insertionSort( arrayName);
 	//Sorts.printArray( arrayName);
 	 //int [] ary = new int[100]; 
 	 // Sorts.printArray(Sorts.fillRandom(ary));
