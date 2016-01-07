@@ -1,3 +1,4 @@
+import java.util.*;
 public class Sorts{
    public static void printArray(int[]data){
        String s = "";
@@ -89,18 +90,40 @@ public class Sorts{
 
 
 
-		
+     public static int[] fillRandom( int [] nums){
+	 int t = (int)(Math.random() * 10000);
+	 Random r = new Random(t);
+	 int i = 0;
+	 while(i < nums.length){
+	     nums[i] = r.nextInt();
+	     i ++;
+	 }
+	 return nums;
+     }
+
+    public static void swap(int [] ary, int i, int k){
+	int rem = i;
+	ary[i] = k;
+	ary[k] = rem;
+    }
+	    
+	    
+	    
+	 
+	
 		
 	    
 	
 
 
      public static void main(String[]args){
-	 int[] arrayName = {1 , 2,  9, 5, 0, 3};
+	 //int[] arrayName = {1 , 2,  9, 5, 0, 3};
 	 //int[] arrayName = {-24, 32, 459, 459, -7, -7, 2323, 34, 392, 0, -203, 25, 3994, -53, 8};
-	Sorts.printArray( arrayName);
-	System.out.println();
-	Sorts.bubbleSort( arrayName);
-	Sorts.printArray( arrayName);
+	 //Sorts.printArray( arrayName);
+	 //System.out.println();
+	 //Sorts.bubbleSort( arrayName);
+	//Sorts.printArray( arrayName);
+	 int [] ary = new int[100]; 
+	 Sorts.printArray(Sorts.fillRandom(ary));
 	}
 }
